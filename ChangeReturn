@@ -1,0 +1,38 @@
+#Change Return Program
+
+def changeReturn(price,amount_paid):
+    
+    dollars = 0
+    quarters = 0
+    dimes = 0
+    nickels = 0
+    pennies = 0
+    
+    difference  = amount_paid - price
+    
+    while difference > 1:
+        
+        dollars += 1
+        difference -= 1
+    
+    while difference > 0.25:
+    
+        quarters += 1
+        difference -= 0.25
+        
+    while difference > 0.10:
+    
+        dimes += 1
+        difference -= 0.1
+        
+    while difference > 0.05:
+    
+        nickels += 1
+        difference -= 0.05
+        
+    while difference > 0.01:
+    
+        pennies += 1
+        difference -= 0.01
+        
+    print(f'Dollars: {dollars}\nQuarters: {quarters}\nDimes: {dimes}\nNickels: {nickels}\nPennies: {pennies}')
